@@ -184,12 +184,12 @@ if(run==TRUE){
 
 ```{r,include=FALSE}
 if (type == 'tdm') {
-    Results <- read.csv(paste0('Results', D, '_', simu, '.csv'))
-    Allocations <- read.csv(paste0('Allocations', D, '_', simu, '.csv'))
+    Results <- read.csv(file.path(save.path,paste0('Results', D, '_', simu, '.csv')))
+    Allocations <- read.csv(file.path(save.path,paste0('Allocations', D, '_', simu, '.csv')))
   }
   if (type == 'dm') {
-    Results <- read.csv(paste0('Results', D, '_', simu, '_dm.csv'))
-    Allocations <- read.csv(paste0('Allocations', D, '_', simu, '_dm.csv'))
+    Results <- read.csv(file.path(save.path,paste0('Results', D, '_', simu, '_dm.csv')))
+    Allocations <- read.csv(file.path(save.path,paste0('Allocations', D, '_', simu, '_dm.csv')))
   }
   
   uniqueResults = unique(Results[, c('iter', 'K', 'posterior', 'move')])
