@@ -83,7 +83,9 @@ rjmcmc_tdm=function(sim,simu,
     accept=0
     n=(colSums(A$Y)+1)/(N+1)
     eta1=rdirichlet(1,1+b0*n)
-    m=(par$alpha-v0)/(u0-v0)
+    m=t(sapply(1:K,function(k) colMeans(rbind(W[A$C==k,],rep(1,D)/D))))
+    #alternatively:
+    #m=(par$alpha-v0)/(u0-v0)
     m1=matrix(NA,ncol=D,nrow=K)
     for(k in 1:K){
       for(d in 1:D){
