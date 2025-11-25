@@ -23,9 +23,6 @@ library(corrplot)
 
 ```{r}
 
-source("~/Library/Mobile Documents/com~apple~CloudDocs/tDMJune25/simulation0825/short/versionA.R")
- source("~/Library/Mobile Documents/com~apple~CloudDocs/tDMJune25/FinancialData/untilted/checks.R")
-
 data_processing=function(plt=TRUE)
 {
   
